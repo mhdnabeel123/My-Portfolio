@@ -1,0 +1,64 @@
+.welcome-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: radial-gradient(ellipse at 50% 30%, #0a0a20 0%, #020208 100%);
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.scan-lines {
+  position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,229,255,.012) 2px, rgba(0,229,255,.012) 4px);
+  animation: scan-move 8s linear infinite;
+}
+@keyframes scan-move { from{background-position:0 0} to{background-position:0 80px} }
+
+/* HUD crosshair */
+.hud-h { position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(0,229,255,.06); transform: translateY(-50%); }
+.hud-v { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(0,229,255,.06); transform: translateX(-50%); }
+
+/* Corners */
+.corner { position: absolute; width: 48px; height: 48px; border-color: rgba(0,229,255,.7); border-style: solid; }
+.corner.tl { top: 28px; left: 28px; border-width: 2px 0 0 2px; animation: corner-pulse 3s ease infinite; }
+.corner.tr { top: 28px; right: 28px; border-width: 2px 2px 0 0; animation: corner-pulse 3s ease infinite 0.75s; }
+.corner.bl { bottom: 28px; left: 28px; border-width: 0 0 2px 2px; animation: corner-pulse 3s ease infinite 1.5s; }
+.corner.br { bottom: 28px; right: 28px; border-width: 0 2px 2px 0; animation: corner-pulse 3s ease infinite 2.25s; }
+@keyframes corner-pulse { 0%,100%{border-color:rgba(0,229,255,.7)} 50%{border-color:rgba(0,229,255,1);box-shadow:0 0 12px rgba(0,229,255,.5)} }
+
+.wc-center { display: flex; flex-direction: column; align-items: center; gap: 1.75rem; }
+
+/* Radar */
+.radar-wrap { position: relative; width: 160px; height: 160px; display: flex; align-items: center; justify-content: center; }
+.radar-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(0,229,255,.18); }
+.r1 { width: 60px; height: 60px; }
+.r2 { width: 110px; height: 110px; animation: pulse-r 2.5s ease infinite; }
+.r3 { width: 160px; height: 160px; animation: pulse-r 2.5s ease infinite .6s; }
+@keyframes pulse-r { 0%,100%{opacity:.18;transform:scale(1)} 50%{opacity:.5;transform:scale(1.04)} }
+.radar-sweep {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 70%, rgba(0,229,255,.35) 100%);
+  animation: sweep 2.5s linear infinite;
+}
+@keyframes sweep { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+.radar-core { position: relative; z-index: 2; }
+.radar-dot { width: 10px; height: 10px; border-radius: 50%; background: #00e5ff; box-shadow: 0 0 20px #00e5ff, 0 0 40px rgba(0,229,255,.5); animation: pulse-dot 1.5s ease infinite; }
+@keyframes pulse-dot { 0%,100%{transform:scale(1)} 50%{transform:scale(1.4)} }
+
+/* Bar */
+.wc-bar-track { width: min(380px, 90vw); height: 2px; background: rgba(0,229,255,.08); border-radius: 2px; position: relative; overflow: hidden; }
+.wc-bar-fill { position: absolute; inset: 0; width: 100%; background: linear-gradient(90deg, #00e5ff, #7c4dff, #e040fb); transform-origin: left; box-shadow: 0 0 16px rgba(0,229,255,.8); }
+.wc-bar-glow { position: absolute; top: -4px; width: 20px; height: 10px; background: rgba(255,255,255,.9); border-radius: 50%; filter: blur(4px); }
+
+/* Name */
+.wc-name {
+  font-family: 'Orbitron', sans-serif; font-size: clamp(1.6rem, 5vw, 3.2rem); font-weight: 900;
+  letter-spacing: 0.08em; text-align: center;
+  background: linear-gradient(135deg, #00e5ff, #7c4dff, #e040fb);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(0,229,255,.4));
+}
+.wc-role { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.3em; color: rgba(0,229,255,.7); text-align: center; }
+
+/* Status row */
+.wc-status-row { display: flex; gap: 2rem; align-items: center; }
+.wc-status-item { display: flex; align-items: center; gap: 0.5rem; }
+.wc-dot { width: 6px; height: 6px; border-radius: 50%; background: #00e676; box-shadow: 0 0 8px #00e676; display: block; }
+.wc-mono { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: rgba(255,255,255,.4); letter-spacing: 0.15em; }
+.wc-ok { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: #00e676; font-weight: 700; letter-spacing: 0.1em; }
