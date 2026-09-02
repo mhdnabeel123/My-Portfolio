@@ -76,13 +76,15 @@ export default function Education() {
         </div>
 
         {/* Achievements + Patents */}
-        <div className="extras-row" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'1.5rem' }}>
+        <div className="extras-row" style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(320px, 1fr))', gap:'1.5rem' }}>
           {achievements.map((a, i) => (
-            <div key={i} className="extra-card glass" style={{ padding:'1.5rem', display:'flex', alignItems:'center', gap:'1rem', borderColor:'rgba(255,215,64,.2)', background:'linear-gradient(135deg,rgba(255,215,64,.06),rgba(255,111,0,.03))' }}>
-              <span style={{ fontSize:'2.2rem' }}>{a.icon}</span>
+            <div key={i} className="extra-card glass" style={{ padding:'1.5rem', display:'flex', alignItems:'flex-start', gap:'1rem', borderColor:'rgba(255,215,64,.2)', background:'linear-gradient(135deg,rgba(255,215,64,.06),rgba(255,111,0,.03))' }}>
+              <span style={{ fontSize:'2.2rem', flexShrink:0 }}>{a.icon}</span>
               <div>
+                <div style={{ fontFamily:'var(--f-mono)', fontSize:'.65rem', color:'var(--c-gold)', letterSpacing:'.1em', textTransform:'uppercase', marginBottom:'.35rem' }}>Achievement · {a.date}</div>
                 <div style={{ fontFamily:'var(--f-hd)', fontWeight:700, fontSize:'.95rem', marginBottom:'.2rem' }}>{a.title}</div>
-                <div style={{ fontFamily:'var(--f-mono)', fontSize:'.72rem', color:'rgba(255,255,255,.4)' }}>{a.org} · {a.date}</div>
+                <div style={{ fontFamily:'var(--f-mono)', fontSize:'.72rem', color:'rgba(255,255,255,.5)', marginBottom:'.3rem' }}>{a.org}</div>
+                {a.desc && <div style={{ fontSize:'.8rem', color:'rgba(255,255,255,.4)', lineHeight:1.5 }}>{a.desc}</div>}
               </div>
             </div>
           ))}
@@ -92,7 +94,7 @@ export default function Education() {
               <div>
                 <div style={{ fontFamily:'var(--f-mono)', fontSize:'.65rem', color:'var(--c-cyan)', letterSpacing:'.1em', textTransform:'uppercase', marginBottom:'.35rem' }}>Patent · {p.date}</div>
                 <div style={{ fontWeight:600, fontSize:'.84rem', lineHeight:1.5, marginBottom:'.3rem' }}>{p.title}</div>
-                <div style={{ fontFamily:'var(--f-mono)', fontSize:'.7rem', color:'rgba(255,255,255,.3)' }}>{p.publisher} · {p.appNo}</div>
+                <div style={{ fontFamily:'var(--f-mono)', fontSize:'.7rem', color:'rgba(255,255,255,.4)' }}>{p.publisher} · Application No: {p.appNo}</div>
               </div>
             </div>
           ))}

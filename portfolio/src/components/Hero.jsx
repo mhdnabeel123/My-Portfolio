@@ -5,7 +5,7 @@ import nabeelPhoto from '../assets/nabeel.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const roles = ['ML Engineer', 'AI Innovator', 'Computer Vision Dev', 'Deep Learning Builder'];
+const roles = ['AI & ML Engineer', 'Autonomous Systems Dev', 'Computer Vision & XAI', 'Generative AI Builder', 'Agentic AI Dev'];
 
 // ── Magnetic button hook ──
 function useMagnetic(ref, strength = 0.35) {
@@ -31,6 +31,7 @@ export default function Hero() {
   const roleRef  = useRef(null);
   const btn1Ref  = useRef(null);
   const btn2Ref  = useRef(null);
+  const btn3Ref  = useRef(null);
   const imgRef   = useRef(null);
   const charIdx  = useRef(0);
   const roleIdx  = useRef(0);
@@ -39,6 +40,7 @@ export default function Hero() {
 
   useMagnetic(btn1Ref, 0.4);
   useMagnetic(btn2Ref, 0.4);
+  useMagnetic(btn3Ref, 0.4);
 
   /* Typewriter */
   useEffect(() => {
@@ -116,18 +118,19 @@ export default function Hero() {
 
           {/* Description */}
           <p className="hero-desc" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,.48)', lineHeight: 1.85, maxWidth: 520, marginBottom: '2.5rem' }}>
-            CS & AI undergrad at VTU, Mysuru. Building real-world intelligent systems — from fetal brain segmentation to DDoS detection. One patent filed. Five projects shipped.
+            CS & AI undergrad at Maharaja Institute of Technology Mysore. Building real-world intelligent systems — from fetal head segmentation to multi-agent society simulations. One patent filed. Four featured AI projects shipped.
           </p>
 
           {/* Buttons */}
           <div className="hero-btns" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '3.5rem' }}>
-            <a ref={btn1Ref} href="https://github.com/mhdnabeel123" target="_blank" rel="noreferrer" className="btn-glow">⚡ View Projects</a>
-            <a ref={btn2Ref} href="#contact" className="btn-outline">Contact Me →</a>
+            <a ref={btn1Ref} href="#projects" className="btn-glow">⚡ View Projects</a>
+            <a ref={btn2Ref} href="/resume_mohammed_nabeel_n_h.pdf" target="_blank" rel="noreferrer" className="btn-outline">📄 Resume ↗</a>
+            <a ref={btn3Ref} href="#contact" className="btn-outline">Contact Me →</a>
           </div>
 
           {/* Stats with animated numbers */}
           <div className="stats-row" style={{ display: 'flex', gap: '3rem' }}>
-            {[['5+','Projects Built'],['8+','Certifications'],['1','Patent Filed'],['2+','Years Deep']].map(([n,l]) => (
+            {[['4+','Projects Built'],['5+','Certifications'],['1','Patent Filed'],['2+','Years Deep']].map(([n,l]) => (
               <div key={l} className="hero-stat">
                 <div style={{ fontFamily: 'var(--f-hd)', fontSize: '2.2rem', fontWeight: 900, color: 'var(--c-cyan)', textShadow: '0 0 24px rgba(0,229,255,.7)', lineHeight: 1 }}>{n}</div>
                 <div style={{ fontFamily: 'var(--f-mono)', fontSize: '.65rem', color: 'rgba(255,255,255,.32)', textTransform: 'uppercase', letterSpacing: '.12em', marginTop: '.35rem' }}>{l}</div>

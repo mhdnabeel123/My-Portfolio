@@ -31,10 +31,10 @@ export default function About() {
   }, []);
 
   const traits = [
-    { icon: '🧠', label: 'Deep Learning', desc: 'PyTorch · TensorFlow · Custom architectures', color: '#7c3aed' },
-    { icon: '👁️', label: 'Computer Vision', desc: 'OpenCV · Segmentation · Real-time inference', color: '#00d4ff' },
-    { icon: '🚀', label: 'ML Deployment', desc: 'FastAPI · Docker · REST APIs · Cloud', color: '#10b981' },
-    { icon: '📑', label: 'Patent Filed', desc: 'Drone power-line inspection system', color: '#ec4899' },
+    { icon: '🧠', label: 'GenAI & Agentic AI', desc: 'LLMs · RAG · LangChain · LangGraph', color: '#7c3aed' },
+    { icon: '👁️', label: 'Computer Vision & XAI', desc: 'PyTorch · U-Net · Grad-CAM · OpenCV', color: '#00d4ff' },
+    { icon: '🚀', label: 'Full-Stack & Backend', desc: 'FastAPI · Django · Next.js · Docker', color: '#10b981' },
+    { icon: '📑', label: 'Patent Published', desc: 'Autonomous micro-drone inspection system', color: '#ec4899' },
   ];
 
   return (
@@ -67,10 +67,10 @@ export default function About() {
               {[
                 [['kw','const '],['va','nabeel'],' = {'],
                 [['  '],['ke','  name'],':   ',['st','"Mohammed Nabeel N H"'],','],
-                [['ke','  role'],':   ',['st','"ML Engineer"'],','],
-                [['ke','  location'],': ',['st','"Mysuru, India"'],','],
-                [['ke','  passion'],': ',['st','"Building AI"'],','],
-                [['ke','  status'],':  ',['st','"Open to intern"'],','],
+                [['ke','  role'],':   ',['st','"AI / ML Engineer"'],','],
+                [['ke','  location'],': ',['st','"Mysore, India"'],','],
+                [['ke','  passion'],': ',['st','"Autonomous & Agentic AI"'],','],
+                [['ke','  status'],':  ',['st','"Open to Internships"'],','],
                 [['ke','  patent'],':  ',['bo','true']],
                 ['}'],
               ].map((line, li) => (
@@ -89,7 +89,7 @@ export default function About() {
           {/* Traits */}
           <div>
             <p style={{ fontSize:'1.05rem', color:'rgba(255,255,255,0.55)', lineHeight:1.9, marginBottom:'2rem' }}>
-              I'm a <strong style={{color:'#fff'}}>Computer Science & AI</strong> undergraduate at VTU passionate about turning research into real products. From ultrasound segmentation to enterprise security systems — I build things that matter.
+              I'm a <strong style={{color:'#fff'}}>Computer Science (Artificial Intelligence)</strong> undergraduate at Maharaja Institute of Technology Mysore passionate about turning cutting-edge AI research into real-world systems. From fetal head segmentation with explainable AI to multi-agent artificial society simulations — I build technologies that make an impact.
             </p>
             <div className="trait-grid" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'1rem' }}>
               {traits.map(({ icon,label,desc,color }) => (

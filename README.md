@@ -1,20 +1,20 @@
 # Mohammed Nabeel - Portfolio 🚀
 
-Welcome to my portfolio repository! I'm a Computer Science & AI undergraduate passionate about turning Machine Learning research into production-grade applications. From ultrasound image segmentation to autonomous drone systems, I build software that bridges the gap between AI theory and real-world impact.
+Welcome to my portfolio repository! I'm a Computer Science (Artificial Intelligence) undergraduate at Maharaja Institute of Technology Mysore passionate about building autonomous systems, Generative AI, Computer Vision, and full-stack intelligent systems.
 
 ## 🧑‍💻 About Me
-* **Role:** ML Engineer & AI Innovator
-* **Location:** Mysuru, India
-* **Interests:** Deep Learning, Computer Vision, Web Apps, Drone Automation
-* **Special Achievements:** Patent filed for a **Drone Power-line Inspection System** 🛰️
+* **Role:** AI & ML Engineer | Autonomous Systems Builder
+* **Location:** Mysore, India
+* **Interests:** Generative AI, LLMs, Computer Vision & XAI, Multi-Agent Systems, Autonomous Robotics
+* **Special Achievements:** Patent filed for an **Autonomous Micro-Drone System for Power Line Inspection & Repair** 🛰️
 
 ---
 
 ## 🛠️ Tech Stack & Skills
-* **AI/ML:** PyTorch, TensorFlow, OpenCV, Deep Learning models (segmentation, classification, object detection).
-* **Back-end & Deployment:** Python, FastAPI, Docker, REST APIs.
-* **Front-end:** React, Vite, Framer Motion, GSAP, Three.js / React Three Fiber.
-* **Tools & OS:** Git, Linux, macOS.
+* **AI/ML & Frameworks:** PyTorch, TensorFlow, Keras, Scikit-learn, LangChain, LangGraph, OpenCV, Grad-CAM, U-Net, RAG, Prompt Engineering.
+* **Back-end & Deployment:** Python, FastAPI, Flask, Django, Django REST Framework, Docker, Git, REST APIs.
+* **Front-end & UI:** React.js, Next.js, TypeScript, JavaScript, Framer Motion, GSAP, Three.js / React Three Fiber.
+* **Databases:** MongoDB, PostgreSQL, SQLite, Firebase, Supabase.
 
 ---
 
@@ -22,11 +22,11 @@ Welcome to my portfolio repository! I'm a Computer Science & AI undergraduate pa
 ```bash
 ├── portfolio/                 # React + Vite frontend source code
 │   ├── src/                   # React components, styles, and data
-│   ├── public/                # Static assets (images, icons)
+│   ├── public/                # Static assets (images, icons, resume PDF)
 │   ├── index.html             # Application entry HTML
 │   ├── vite.config.js         # Vite configuration
 │   └── package.json           # Node dependencies
-├── resume_mohammed_nabeel_n_h.pdf # Professional Resume (PDF)
+├── Nabeel Resume updated 1.0 (1).pdf # Latest Professional Resume (PDF)
 └── .gitignore                 # Git ignore file
 ```
 
@@ -62,6 +62,9 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 ---
 
-## 📜 Patent & Work Highlights
-* **Drone Power-line Inspection System:** Developed and filed a patent for a system that uses Computer Vision on drones to autonomously inspect power lines for damage, minimizing human risk and improving maintenance speeds.
-* **Fetal MRI / Ultrasound Segmentation:** Developed deep learning models for precise head image segmentation and analytics.
+## 📜 Key Highlights & Projects
+* **Future Grid — Artificial Society Simulation System:** Multi-agent society simulation modeling 500+ autonomous agents with decay-weighted episodic memory and async LLM orchestration.
+* **Fetal Head Segmentation with Explainable AI (XAI):** Medical image segmentation using U-Net and Grad-CAM for ultrasound interpretability.
+* **Krishi Sakhi V2.0 – AI-Powered Digital Farming Assistant:** Full-stack agriculture platform with CNN disease detection (81% accuracy) and Gemini chatbot.
+* **EduTrack – College ERP & Academic Management System:** Multi-role academic ERP with automated performance analytics.
+* **Patent:** *Autonomous Micro-Drone System for Real-Time Power Line Inspection, Micro-Crack Detection and On-Spot Conductive Repair* (Indian Patent Office – App No: 202541117134).
